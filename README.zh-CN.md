@@ -19,7 +19,8 @@ Android/data/com.xxx.xxx(xxx为你应用的包名)下cache、files 是可以进�
 
 还有6.0以后的动态权限自己去申请
 
- ``java
+
+ ```java
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (ContextCompat.checkSelfPermission(this.mActivity, "android.permission.WRITE_EXTERNAL_STORAGE") != 0) {
@@ -38,4 +39,4 @@ Android/data/com.xxx.xxx(xxx为你应用的包名)下cache、files 是可以进�
         } 
 
     }
-``
+```
