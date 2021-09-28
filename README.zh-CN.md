@@ -1,4 +1,5 @@
 # SD卡文件的访问
+## 英文文档[readme](https://github.com/jambestwick/SdCardFile/blob/main/README.md)
 安卓所有版本的内置外置的SDCAR的读写方案。  
 ![image](image.png)
 
