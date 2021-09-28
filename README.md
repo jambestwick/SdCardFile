@@ -1,4 +1,5 @@
 # SdCardFile
+## Chinese ![chinese-readme](https://github.com/jambestwick/SdCardFile/edit/main/README.zh-CN.md)
 android all sdk versions sdcard TF inner or removeable card read write.
 
 ![image](image.png)
