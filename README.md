@@ -18,7 +18,7 @@ Of course, the necessary permissions in AndroidManifest.xml are still required. 
 
 There are also dynamic permissions after 6.0 to apply for by yourself
 
- ``java
+ ```java
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (ContextCompat.checkSelfPermission(this.mActivity, "android.permission.WRITE_EXTERNAL_STORAGE") != 0) {
@@ -37,4 +37,4 @@ There are also dynamic permissions after 6.0 to apply for by yourself
         }
 
     }
-``
+```
