@@ -115,6 +115,23 @@ public class FileUtil {
         File[] files = context.getExternalCacheDirs();//如果有2个文件，一般第一个是内置，第二个外置
         return files;
     }
+    
+    /***
+     * 获取文件的时间,辅助定期删除录像信息
+     * **/
+    @TargetApi(Build.VERSION_CODES.O)
+    public static Long getFileCreateTime(String filePath) {
+        File file = new File(filePath);
+        try {
+            Path path = Paths.get(filePath);
+            BasicFileAttributeView basicView = Files.getFileAttributeView(path, BasicFileAttributeView.class, LinkOption.NOFOLLOW_LINKS);
+            BasicFileAttributes attr = basicView.readAttributes();
+            return attr.creationTime().toMillis();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return file.lastModified();
+        }
+    }
 
 
 
