@@ -52,7 +52,7 @@ public class FileUtil {
     /**
      * 获取外置卡（可拆卸的）的目录。
      * Environment.getExternalStorageDirectory()获取的目录，有可能是内置卡的。
-     * 在高版本上，能访问的外置卡目录只能是/Android/data/{package}。
+     * 在高版本上，能访问的外置卡目录只能是/Android/data/{package}进行读写操作，因此外置卡应在此处理app文件。
      */
     public static String getAppRootOfSdCardRemovable(Context context) {
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
